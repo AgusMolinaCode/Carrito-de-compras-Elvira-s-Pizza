@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bangers", cursive;
+}
+
+body {
+  background-color: rgb(221, 63, 63);
+}
+
+#logo1 {
+  border-radius: 50%;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(/FotosPizza/vecteezy_seamless-pizza-pattern-colored-pizza-background-doodle_8877849.jpg);
+  background-size: cover;
+  justify-content: center;
+}
+
+h2 {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0px 15px;
+  font-size: 90px;
+}
+
+.pizzas {
+  display: flex;
+  margin: 25px;
+}
+
+#card2 {
+  margin: 35px;
+}
+
+.card-header {
+  background-color: rgb(247, 177, 165);
+}
+
+.card-body {
+  background-color: beige;
+}/*# sourceMappingURL=main.css.map */
