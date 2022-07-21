@@ -7,14 +7,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./script.js">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-danger">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="./FotosPizza/icons8-agregar-a-carrito-de-compras-100.png" width="60px" alt=""></a>
+                <div>
+                  <ul>
+                    <li class="submenu">
+                      <a class="navbar-brand" href="#"><img src="./FotosPizza/icons8-agregar-a-carrito-de-compras-100.png" width="60px" alt=""></a>
+                      <div id="carrito">
+                              <table id="lista-carrito" class="table table-striped-columns">
+                                  <thead>
+                                    <tr>
+                                      <th>TOTAL: </th>
+                                      <th id="total"></th>
+                                    </tr>  
+                                    <tr>
+                                          <th>Nombre</th>
+                                          <th>Precio</th>
+                                          <th>Cantidad</th>
+                                          <th></th>
+                                      </tr>
+                                      
+                                  </thead>
+                                  <tbody></tbody>
+                              </table>
+                            <a href="#" id="vaciar-carrito">Vaciar Carrito</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               <a class="navbar-brand" href="#">Pedí una Elvira’s...</a>
               
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,15 +75,16 @@
             </div>
           </div>
 
-        <div class="pizzas">
+        <div id="lista-pizzas" class="pizzas">
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                   <div class="card">
                     <img src="./FotosPizza/1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <a href="#" class="btn btn-primary">Pedila ya!</a>                    
+                      <h5 class="card-title">Margarita</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                      <h4>200</h4>
+                      <a href="#" class="btn btn-primary" data-id="1">Pedila ya!</a>                    
                     </div>
                   </div>
                 </div>
@@ -65,9 +92,10 @@
                   <div class="card">
                     <img src="./FotosPizza/2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <a href="#" class="btn btn-primary">Pedila ya!</a>
+                      <h5 class="card-title">Ppeperoni</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                      <h4>300 pesos</h4>
+                      <a href="#" class="btn btn-primary" data-id="2">Pedila ya!</a>
                     </div>
                   </div>
                 </div>
@@ -75,9 +103,10 @@
                   <div class="card">
                     <img src="./FotosPizza/3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title">Tomate</h5>
                       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Pedila ya!</a>
+                      <h4>400 pesos</h4>
+                      <a href="#" class="btn btn-primary" data-id="3">Pedila ya!</a>
                     </div>
                   </div>
                 </div>
@@ -85,9 +114,10 @@
                   <div class="card">
                     <img src="./FotosPizza/4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <a href="#" class="btn btn-primary">Pedila ya!</a>  
+                      <h5 class="card-title">4 Quesos</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                      <h4>500 pesos</h4>
+                      <a href="#" class="btn btn-primary" data-id="4">Pedila ya!</a>  
                     </div>
                   </div>
                 </div>
@@ -95,9 +125,10 @@
                     <div class="card">
                       <img src="./FotosPizza/5.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="#" class="btn btn-primary">Pedila ya!</a>  
+                        <h5 class="card-title">Hongos</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <h4>1240 pesos</h4>
+                        <a href="#" class="btn btn-primary" data-id="5">Pedila ya!</a>  
                       </div>
                     </div>
                   </div>
@@ -105,9 +136,10 @@
                     <div class="card">
                       <img src="./FotosPizza/6.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="#" class="btn btn-primary">Pedila ya!</a>  
+                        <h5 class="card-title">Muzzarella</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <h4>58.52 pesos</h4>
+                        <a href="#" class="btn btn-primary" data-id="6">Pedila ya!</a>  
                       </div>
                     </div>
                   </div>  
@@ -129,5 +161,6 @@
     </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
