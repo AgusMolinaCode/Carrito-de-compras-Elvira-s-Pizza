@@ -12,6 +12,12 @@ function cargarEventListeners(){
     //elimina pizzas de carrito
     carrito.addEventListener('click', eliminarPizza);
 
+    document.addEventListener('DOMContentLoaded', () => {
+        articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        carritoHTML();
+    })
+
     //vacio de carrito
     vaciarCarritoBtn.addEventListener('click',() => {
         articulosCarrito = [];//reseteo el arreglo
@@ -115,6 +121,13 @@ function carritoHTML(){
             
 
     })
+
+    sincronizarStorage();
+
+}
+
+function sincronizarStorage(){
+    localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
 }
 
 function limpiarHTML(){

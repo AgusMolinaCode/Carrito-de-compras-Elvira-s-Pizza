@@ -54,9 +54,13 @@ h2 {
   font-size: 23px;
 }
 
-.btn:hover {
+.btn:active {
   background-color: bisque;
   color: black;
+}
+
+.btn-primary {
+--bs-btn-hover-bg: rgb(151, 6, 35);
 }
 
 .borrar-curso {
